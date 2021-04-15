@@ -54,7 +54,7 @@ public class App {
         JLabel label = new JLabel();
 
         String sarray[] = new String[10];
-        sarray[0] = "Hi!, " + getGreeting(localhour);
+        sarray[0] = "Hi!, " + Greeting.getGreeting(localhour);
         sarray[1] = "";
         sarray[2] = "Date: " + now.toLocalDate();
         sarray[3] = "Mexico Time: " + localTimeStringLocal;
@@ -79,19 +79,5 @@ public class App {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
-    }
-    
-    public static String getGreeting(int x) {
-        String greeting = new String();
-        if (6<=x&&x<=11) {
-            greeting = "\nGood morning!\n";
-        } else if (12<=x&&x<=18) {
-            greeting = "\nGood afternoon!\n";
-        } else if (19<=x&&x<=22) {
-            greeting = "\nGood night!\n";
-        } else {
-            greeting = "\nGo to sleep!\n";
-        }
-        return greeting;
     }
 }
