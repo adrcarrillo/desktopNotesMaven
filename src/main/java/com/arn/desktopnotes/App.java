@@ -18,10 +18,16 @@ public class App implements Runnable {
     BufferedReader reader;
     Thread t=null;
     String valueLabel = "";
+    //String valueLabel;
     JFrame f;
-    JLabel l;
+    //JLabel l;
     Gson gson;
     User user;
+
+    //Button alternative
+    JButton b;
+
+    String sarray[] = new String[10];
 
     //private static void Appi() {
     App() {
@@ -33,19 +39,26 @@ public class App implements Runnable {
         }
 
         f = new JFrame ("Desktop Notes");
-        l = new JLabel();
+        //l = new JLabel();
+
+        //Button alternative
+        b = new JButton();
+        b.setBounds(0,0,300,200);
 
         ImageIcon img = new ImageIcon(ClassLoader.getSystemResource("ico.png"));
+        //f.add(l,BorderLayout.CENTER);
+        //f.add(b);
+        f.add(b,BorderLayout.CENTER);
+        f.setIconImage(img.getImage());
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setSize(316,238);
+        f.setResizable(false);
+        //f.setLocationRelativeTo(null); //Location enabled
+        f.setLayout(null);
+        f.setVisible(true);
 
         t = new Thread(this);
         t.start();
-    
-        f.add(l,BorderLayout.CENTER);
-        f.setIconImage(img.getImage());
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.setSize(300,200);
-        f.setLocationRelativeTo(null);
-        f.setVisible(true);
 
     }
 
@@ -80,7 +93,7 @@ public class App implements Runnable {
                 String localTimeStringGretting = timeFormatGretting.format(now);
                 int localhour = Integer.parseInt(localTimeStringGretting);
             
-                String sarray[] = new String[10];
+                valueLabel = ""; //Reset
                 sarray[0] = "Hi!, " + Greeting.getGreeting(localhour);
                 sarray[1] = "";
                 sarray[2] = "Date: " + now.toLocalDate();
@@ -92,14 +105,12 @@ public class App implements Runnable {
                 sarray[8] = "PC: " + pc;
                 sarray[9] = "Mobile: " + mobile;
             
-                //String valueLabel = "";
                 for (int j=0 ; j < sarray.length; j++){
                     valueLabel += "<html>" + sarray[j] + "<br/>";
                 }
-                //l.setText(valueLabel + "</html>");
 
                 printTime();
-                Thread.sleep(5000);
+                Thread.sleep(1000);
             }
             
         } catch (Exception e) {
@@ -110,7 +121,8 @@ public class App implements Runnable {
 
     public void printTime() {
         System.out.println("Step....");
-        l.setText(valueLabel + "</html>");
+        //l.setText(valueLabel + "</html>");
+        b.setText(valueLabel + "</html>");
 
     }
 
@@ -121,7 +133,4 @@ public class App implements Runnable {
         new App();
 
     }
-
-
-
 }
