@@ -120,7 +120,7 @@ public class App implements Runnable {
     }
 
     public void printTime() {
-        System.out.println("Step....");
+        //System.out.println("Step....");
         //l.setText(valueLabel + "</html>");
         b.setText(valueLabel + "</html>");
 

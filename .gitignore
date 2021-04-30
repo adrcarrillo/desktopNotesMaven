@@ -12,3 +12,4 @@ target/classes/com/arn/desktopnotes/User.class
 target/test-classes/com/arn/app/AppTest.class
 target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
 target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+.vscode/settings.json
