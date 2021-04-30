@@ -4,3 +4,11 @@
 .settings/org.eclipse.jdt.apt.core.prefs
 .settings/org.eclipse.jdt.core.prefs
 .settings/org.eclipse.m2e.core.prefs
+target/classes/ico.png
+target/classes/module-info.class
+target/classes/com/arn/desktopnotes/App.class
+target/classes/com/arn/desktopnotes/Greeting.class
+target/classes/com/arn/desktopnotes/User.class
+target/test-classes/com/arn/app/AppTest.class
+target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
