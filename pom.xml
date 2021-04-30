@@ -92,7 +92,7 @@
           <configuration>
             <noHeaderFiles>true</noHeaderFiles>
             <noManPages>true</noManPages>
-            <launcher>hello=com.arn.desktopnotes/com.arn.desktopnotes.App</launcher>
+            <launcher>launcher=com.arn.desktopnotes/com.arn.desktopnotes.App</launcher>
           </configuration>
 	      </plugin>
 
